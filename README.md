@@ -13,7 +13,7 @@ Both Windows and Mac OS are supported.
 
 ## Prerequisites
 
-- JDK 21
+- Java 21
 - Node >= 14.x
 - Maven 3.x
 
@@ -43,6 +43,8 @@ During development, you may work on front-end and backend separately with indepe
 - To run backend, import the Maven project into your favorite Java IDE and launch from there. The embedded Tomcat server will be running on port `8080`.
 - To run front-end, run `npm run dev` in `react` folder. Vite will run a server on port `9000` with hot reload. It is configured to proxy `actuator/health` and `api` URL to port `8080`.
 - To run the Electron part, run `npm run start` in root folder. The Electron app loads the home page at `http://localhost:9000`, therefore you should run both backend and front-end first.
+
+There's also a script to run all three parts in one command in the root directory called `run_dev.sh`.
 
 ## How it works
 
