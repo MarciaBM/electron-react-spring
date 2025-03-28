@@ -14,3 +14,4 @@ yarn-error.log
 spring/backend.log
 electron.log
 react/package-lock.json
+package-lock.json

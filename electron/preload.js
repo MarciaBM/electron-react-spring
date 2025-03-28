@@ -1,24 +1,24 @@
 const { app, contextBridge, ipcRenderer } = require('electron')
-const logger = require('./logger')
+const log = require('./logger')
 
 const LOG_PREFIX = '[ui]'
 
 contextBridge.exposeInMainWorld('interop', {
   log: {
     info(msg) {
-      logger.info(`${LOG_PREFIX} ${msg}`)
+      log.info(`${LOG_PREFIX} ${msg}`)
     },
     debug(msg) {
-      logger.debug(`${LOG_PREFIX} ${msg}`)
+      log.debug(`${LOG_PREFIX} ${msg}`)
     },
     warn(msg) {
-      logger.warn(`${LOG_PREFIX} ${msg}`)
+      log.warn(`${LOG_PREFIX} ${msg}`)
     },
     error(msg) {
-      logger.error(`${LOG_PREFIX} ${msg}`)
+      log.error(`${LOG_PREFIX} ${msg}`)
     },
     log(msg) {
-      logger.silly(`${LOG_PREFIX} ${msg}`)
+      log.silly(`${LOG_PREFIX} ${msg}`)
     },
   },
   setBadgeCount(count) {
