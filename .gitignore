@@ -11,3 +11,6 @@ yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
+spring/backend.log
+electron.log
+react/package-lock.json

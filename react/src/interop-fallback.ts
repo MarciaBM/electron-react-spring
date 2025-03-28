@@ -1,4 +1,4 @@
-import type Interop from './types/InterOp'
+import type Interop from './types/Interop'
 
 /* eslint-disable no-console */
 function promptNoElectron() {
@@ -24,7 +24,8 @@ const fallBack: Interop = {
       console.log(msg)
     },
   },
-  setBadgeCount(count: Number) {
+  setBadgeCount(count: number) {
+    console.info(count)
     promptNoElectron()
   },
   showOpenDialog() {
